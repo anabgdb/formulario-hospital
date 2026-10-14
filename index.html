@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Garcia</title>
+
+    <style>
+        /* VARIÁVEIS DE CORES */
+        :root {
+            --cor-principal: #176b87;
+            --cor-secundaria: #2396a6;
+            --cor-destaque: #b8e5eb;
+
+            --cor-fundo: #f0f9fa;
+            --cor-card: #ffffff;
+
+            --cor-texto: #243b44;
+            --cor-texto-claro: #ffffff;
+
+            --cor-borda: #b8d9df;
+
+            --sombra: 0 4px 15px rgba(23, 107, 135, 0.15);
+        }
+
+        /* CONFIGURAÇÃO GERAL */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--cor-principal);
+            color: var(--cor-texto-claro);
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        /* MENU */
+        nav {
+            background-color: var(--cor-secundaria);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* CONTEÚDO PRINCIPAL */
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* FORMULÁRIO */
+        form {
+            background-color: var(--cor-card);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--sombra);
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--cor-borda);
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: var(--cor-principal);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--cor-principal);
+            color: var(--cor-texto-claro);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header id="inicio">
+
+        <h1>Hospital Garcia</h1>
+
+        <p>Formulário de agendamento de consultas</p>
+
+    </header>
+
+    <!-- MENU -->
+    <nav>
+
+        <a href="#inicio">Início</a>
+
+        <a href="#formulario">Agendamento</a>
+
+        <a href="#contato">Contato</a>
+
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <form id="formulario">
+
+            <div class="campo">
+
+                <label for="nome">Nome completo:</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="idade">Idade:</label>
+
+                <input
+                    type="number"
+                    id="idade"
+                    name="idade"
+                    min="0"
+                    max="120"
+                    placeholder="Digite sua idade"
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="email">E-mail:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exemplo@email.com"
+                    required
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="telefone">Telefone:</label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="data">Data desejada para consulta:</label>
+
+                <input
+                    type="date"
+                    id="data"
+                    name="data"
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="horario">Horário desejado:</label>
+
+                <input
+                    type="time"
+                    id="horario"
+                    name="horario"
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="arquivo">Anexar pedido médico, se necessário:</label>
+
+                <input
+                    type="file"
+                    id="arquivo"
+                    name="arquivo"
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="observacao">Observações:</label>
+
+                <input
+                    type="search"
+                    id="observacao"
+                    name="observacao"
+                    placeholder="Digite alguma observação"
+                >
+
+            </div>
+
+            <button type="submit">
+                Enviar
+            </button>
+
+        </form>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer id="contato">
+
+        <p>Hospital Garcia</p>
+
+        <p>Formulário desenvolvido para fins educacionais</p>
+
+    </footer>
+
+</body>
+
+</html>
